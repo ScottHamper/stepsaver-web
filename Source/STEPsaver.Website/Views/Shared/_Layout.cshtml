@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"]</title>
+  <link rel="icon" href="~/favicon.ico?v=2" type="image/x-icon" />
+
+  <environment names="Development">
+    <link rel="stylesheet" href="~/vendor/weather-icons/css/weather-icons.css" />
+    <link rel="stylesheet" href="~/styles/main.css" />
+  </environment>
+  <environment names="Staging,Production">
+    <link rel="stylesheet" href="~/vendor/weather-icons/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="~/styles/main.min.css" />
+  </environment>
+</head>
+<body>
+  @RenderBody()
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

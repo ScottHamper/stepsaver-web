@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/styles/main.min.css",
+    "inputFiles": [
+      "wwwroot/styles/main.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/vendor/weather-icons/css/weather-icons.min.css",
+    "inputFiles": [
+      "wwwroot/vendor/weather-icons/css/weather-icons.css"
+    ]
+  }
+]

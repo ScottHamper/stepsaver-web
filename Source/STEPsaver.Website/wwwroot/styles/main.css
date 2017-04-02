@@ -1,0 +1,188 @@
+﻿@font-face {
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Hind Vadodara'),
+         local('HindVadodara-Regular'),
+         url('../fonts/hind-vadodara/HindVadodara-Regular.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Hind Vadodara Bold'),
+         local('HindVadodara-Bold'),
+         url('../fonts/hind-vadodara/HindVadodara-Bold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Hind Vadodara', sans-serif;
+    justify-content: center;
+    min-height: 100%;
+}
+
+a {
+    color: #1684ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+[class^="icon-"]::before {
+    cursor: default;
+}
+
+.http-error__code,
+.http-error__name {
+    display: block;
+    text-align: center;
+}
+
+.http-error__code {
+    color: #653a3a;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px #938282, 2px 2px #938282, 3px 3px #938282, 4px 4px #938282, 5px 5px #938282;
+}
+
+.http-error__code,
+.weather-conditions__temperature {
+    font-size: 16rem;
+    font-weight: 700;
+    line-height: 60%;
+    padding-bottom: 1.8rem;
+}
+
+.http-error__name {
+    color: #8a6464;
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    word-spacing: .5rem;
+}
+
+.http-error__escape-hatch {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.weather-conditions {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.weather-conditions__temperature {
+    margin-right: 4rem;
+    text-shadow: 1px 1px #AAA, 2px 2px #AAA, 3px 3px #AAA, 4px 4px #AAA, 5px 5px #AAA;
+}
+
+.weather-conditions__temperature-degree-symbol {
+    display: inline-block;
+    font-size: 8rem;
+    line-height: 80%;
+    vertical-align: 80%;
+}
+
+/* <= 32 degrees F */
+.weather-conditions__temperature--freezing {
+
+}
+
+/* 33 - 60 degrees F*/
+.weather-conditions__temperature--cool {
+
+}
+
+/* 60 - 79 degrees F */
+.weather-conditions__temperature--warm {
+
+}
+
+/* >= 80 degrees F */
+.weather-conditions__temperature--hot {
+
+}
+
+.weather-conditions__secondary {
+    font-size: 1.9rem;
+    list-style: none;
+}
+
+.last-update-time {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 48rem) {
+    .weather-conditions {
+        flex-direction: column;
+    }
+
+    .weather-conditions__temperature {
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 30rem) {
+    .weather-conditions {
+        margin-bottom: 2rem;
+    }
+
+    .http-error__code,
+    .weather-conditions__temperature {
+        font-size: 50vw;
+        padding-bottom: 6vw;
+    }
+
+    .http-error__name {
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+        padding: 0 8vw;
+        word-spacing: .1rem;
+    }
+
+    .http-error__escape-hatch {
+        margin-top: 3rem;
+    }
+
+    .weather-conditions__temperature-degree-symbol {
+        font-size: 25vw;
+        margin-left: -1vw;
+    }
+
+    .weather-conditions__secondary {
+        font-size: 1.5rem;
+    }
+
+    .last-update-time {
+        font-size: 1rem;
+        max-width: 60vw;
+        text-align: center;
+    }
+
+    .last-update-time time {
+        display: inline-block;
+    }
+}

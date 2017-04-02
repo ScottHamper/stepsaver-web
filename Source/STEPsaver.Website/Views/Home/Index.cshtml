@@ -1,0 +1,33 @@
+﻿@model STEPsaver.Model.WeatherConditions
+
+<div class="weather-conditions">
+  <div title="Temperature (F)" class="weather-conditions__temperature">
+    @Model.Temperature<span class="weather-conditions__temperature-degree-symbol">°</span>
+  </div>
+
+  <ul class="weather-conditions__secondary">
+    <li title="Wind speed &amp; direction" class="icon-wind">
+      @Model.WindSpeed mph
+      @if (Model.WindSpeed > 0)
+      {
+        @:• @Model.WindDirection
+      }
+    </li>
+    <li title="Relative humidity" class="icon-droplet">
+      @Model.RelativeHumidity%
+    </li>
+    <li title="Sunlight intensity" class="icon-sun-o">
+      @Model.SunlightIntensity mW/cm<sup>2</sup>
+    </li>
+    <li title="Accumulative sunlight since 7:30 AM" class="icon-sun">
+      @Model.AccumulativeSunlight kWh
+    </li>
+  </ul>
+</div>
+
+<div class="last-update-time">
+  Last updated at
+  <time datetime="@Model.Timestamp.ToString("yyyy-MM-ddTHH:mm:sszzz")">
+    @Model.Timestamp.ToString("T")
+  </time>
+</div>

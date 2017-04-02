@@ -1,0 +1,17 @@
+﻿@model STEPsaver.Website.Models.Errors.HttpStatusModel
+
+@{
+  ViewData["Title"] = string.Format("{0} - {1}", Model.Code, Model.Name);
+}
+
+<div class="http-error">
+  <span class="http-error__code">@Model.Code</span>
+  <span class="http-error__name">@Model.Name</span>
+
+  @if (!ViewContext.RouteData.IsAction("Index", "Home"))
+  {
+    <div class="http-error__escape-hatch">
+      <a href="@Url.Action("Index", "Home")">Let's get outta here!</a>
+    </div>
+  }
+</div>
